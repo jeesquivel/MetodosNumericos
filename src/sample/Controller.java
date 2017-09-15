@@ -15,7 +15,7 @@ public class Controller {
 
     public void saludar(){
 
-        cromo.setText("hola ema");
+        cromo.setText("holis");
 
 
 
