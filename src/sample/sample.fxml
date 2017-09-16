@@ -2,11 +2,48 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Label fx:id="cromo" layoutX="211.0" layoutY="70.0" prefHeight="34.0" prefWidth="101.0" text="Label" />
-      <Button fx:id="boton" layoutX="91.0" layoutY="72.0" mnemonicParsing="false" onAction="#saludar" text="Button" />
+      <GridPane layoutX="26.0" layoutY="30.0" prefHeight="245.0" prefWidth="348.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="84.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="335.0" minWidth="10.0" prefWidth="133.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="335.0" minWidth="10.0" prefWidth="71.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="50.0" text="Radio:" />
+            <Label text="Longitud:" GridPane.rowIndex="1" />
+            <Label text="Volumen:" GridPane.rowIndex="2" />
+            <TextField fx:id="EntryRadio" GridPane.columnIndex="1" />
+            <TextField fx:id="EntryLongitud" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="EntryVolumen" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="m" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" />
+            <Label text="m" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label text="m3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label text="Tolerancia:" GridPane.rowIndex="3" />
+            <TextField fx:id="EntryTolerancia" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <ImageView fx:id="vistaImagen" fitHeight="260.0" fitWidth="393.0" layoutX="374.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+         <image>
+            <Image url="@../chino.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="26.0" layoutY="360.0" mnemonicParsing="false" onAction="#CalcularBiseccion" text="Calcular" />
+      <Label fx:id="mensaje" layoutX="26.0" layoutY="427.0" prefHeight="31.0" prefWidth="716.0" />
    </children>
 </AnchorPane>
