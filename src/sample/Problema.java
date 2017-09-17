@@ -9,7 +9,9 @@ public class Problema {
 
     public double funcionPirma(double r, double l, double x){
         return 2*l*Math.sqrt(x*(2*r-x));
+
     }
+
 
     public String biseccion(double r, double l, double v,double tol){
         double errorAbs=0;
