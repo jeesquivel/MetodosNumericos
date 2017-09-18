@@ -210,7 +210,7 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        image= new Image("chino.png");
+        image= new Image("chino.jpeg");
         vistaImagen.setImage(image);
 
     }
