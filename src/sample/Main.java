@@ -6,6 +6,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**mari**/
+
+/*
+comentario de chino para mari
+
+ */
 public class Main extends Application {
 
     @Override
